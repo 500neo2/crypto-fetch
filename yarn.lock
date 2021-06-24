@@ -10054,6 +10054,11 @@ schema-utils@^3.0.0:
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
 
+scss-reset@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/scss-reset/-/scss-reset-1.2.0.tgz#9fc05ba43a4e416d0ecc162444ddda6e40bd0408"
+  integrity sha512-PE30mQ7JtwimQzqdS8Uhfl6PBdvKkSK0sSl8m7tZwx5+oEmtTdKyJt1q6L4c+XF0+3jUiyYH312nS/pUsUmuuQ==
+
 scss-tokenizer@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/scss-tokenizer/-/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"
