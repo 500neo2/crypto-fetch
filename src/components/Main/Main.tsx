@@ -35,6 +35,7 @@ export const Main: React.FC = () => {
   }, []);
 
   const options = useMemo(() => getOptions(fetchedCoins), [fetchedCoins]);
+
   const selectedCoinData = useMemo(() => {
     if (selectedCoin) {
       return fetchedCoins.find((coin) => coin.id! === selectedCoin.value!);
