@@ -1,9 +1,10 @@
 /* external libs */
 @import '~scss-reset/reset';
-@import '~scss-reset/variables';
-@import '~scss-reset/typography';
 
 /* shared styles */
+@import "colors";
+@import "typography";
 @import "main";
 
-/* page based styles */
+/* component based styles */
+@import "navigation";
