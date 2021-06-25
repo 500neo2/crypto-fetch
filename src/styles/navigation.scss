@@ -1,0 +1,21 @@
+.navigation-wrapper {
+  background-color: $col-teal;
+  padding: 10px 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.navigation-link {
+  color: $col-black;
+  background: $col-gray-100;
+  padding: 5px 15px;
+  border-radius: 10px;
+
+  &:hover {
+    opacity: 0.8;
+    color: $col-charcoal;
+    text-decoration: none;
+    outline: 0;
+  }
+}

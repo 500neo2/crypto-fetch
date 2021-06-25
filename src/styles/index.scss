@@ -1,0 +1,11 @@
+/* external libs */
+@import '~scss-reset/reset';
+
+/* shared styles */
+@import "colors";
+@import "typography";
+@import "main";
+
+/* component based styles */
+@import "navigation";
+@import "coinData";
