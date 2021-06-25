@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import axios from 'axios';
 import Select from 'react-select';
 import { ICoinData } from '../../types/Coin';
+import { CoinData } from './CoinData/CoinData';
 
 interface IOption {
   value: string;
@@ -16,7 +17,7 @@ const getOptions = (coins: ICoinData[]): IOption[] =>
 
 export const Main: React.FC = () => {
   const [fetchedCoins, setFetchedCoins] = useState<ICoinData[]>([]);
-  const [selectedCoin, setSelectedCoin] = useState(null);
+  const [selectedCoin, setSelectedCoin] = useState<IOption | null>(null);
 
   useEffect((): void => {
     axios
@@ -34,6 +35,12 @@ export const Main: React.FC = () => {
   }, []);
 
   const options = useMemo(() => getOptions(fetchedCoins), [fetchedCoins]);
+  const selectedCoinData = useMemo(() => {
+    if (selectedCoin) {
+      return fetchedCoins.find((coin) => coin.id! === selectedCoin.value!);
+    }
+    return null;
+  }, [fetchedCoins, selectedCoin]);
 
   return (
     <div>
@@ -42,6 +49,7 @@ export const Main: React.FC = () => {
         onChange={handleChange}
         options={options}
       />
+      {selectedCoinData && <CoinData coin={selectedCoinData} />}
     </div>
   );
 };

@@ -1,0 +1,16 @@
+.coin-data-wrapper {
+  margin: 20px auto 0;
+  width: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.coin-data-row {
+  margin: 5px;
+
+  h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+}
